@@ -1,12 +1,12 @@
-public class NoficationFactory {
+public class NotificationFactory {
     public static Notification createNotification(String notificationType){
-        if(notificationType == null){
+        if (notificationType == null){
             return null;
-        }else if(notificationType.equals("SMS")){
+        }else if (notificationType.equalsIgnoreCase("SMS")){
             return new SMSNotification();
-        }else if(notificationType.equals("Email")){
+        } else if (notificationType.equalsIgnoreCase("EMAIL")) {
             return new EmailNotification();
-        } else if (notificationType.equals("Push")) {
+        } else if (notificationType.equalsIgnoreCase("PUSH")) {
             return new PushNotification();
         }
         return null;
